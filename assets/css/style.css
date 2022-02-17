@@ -1,4 +1,8 @@
 /* ======= style sheet ======== */
+:root{
+    --primary-color: #40739e;
+    --alert-color: red;
+}
 *,
 *::after,
 *::before {
@@ -14,7 +18,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #0097e6;
+    background-color: var(--primary-color);
 }
 .wrapper{
 
@@ -57,7 +61,7 @@ body {
 .watch-control button{
    
     border: 1px solid transparent;
-    background: #0097e6;
+    background: var(--primary-color);
     color: #fff;
     font-size: .8rem;
     font-family: poppins;
@@ -69,11 +73,11 @@ body {
     text-align: center;
 }
 .watch-control button:last-child{
-    color: salmon;
-    border: 1px solid salmon;
+    color: var(--alert-color);
+    border: 1px solid var(--alert-color);
     background-color: transparent;
 }
 .watch-control button:last-child:hover{
-    background-color: salmon;
+    background-color: var(--alert-color);
     color: #fff;
 }

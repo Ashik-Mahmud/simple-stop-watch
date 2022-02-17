@@ -32,11 +32,11 @@ function setInterVal() {
 }
 function startStopWatch() {
     if (this.classList.contains('active')) {
-        startButton('Start', '#0097e6', 'active', true)
+        startButton('Start', 'var(--primary-color)', 'active', true)
         clearInterval(interval)
         timeValue(parseFloat(millisecond.innerText), parseFloat(sec.innerText), parseFloat(minutes.innerText))
     } else {
-        startButton('Stop', 'salmon', 'active', false)
+        startButton('Stop', 'var(--alert-color)', 'active', false)
         setInterVal();
     }
 }
@@ -46,7 +46,7 @@ function resetStopWatch() {
     minutes.innerText = '00'
     sec.innerText = '00'
     millisecond.innerText = '00';
-    startButton('Start', '#0098e6', 'active', true)
+    startButton('Start', 'var(--primary-color)', 'active', true)
     timeValue(0, 0, 0)
 };
 document.getElementById("reset-btn").addEventListener("click", resetStopWatch);
